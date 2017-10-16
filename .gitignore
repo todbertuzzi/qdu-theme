@@ -1,0 +1,14 @@
+dump.sql
+# Keep these files out of the repo
+bower_components
+node_modules
+npm-debug.log
+fl-builder
+assets
+vendor
+
+# Hidden files
+*.DS_Store
+*Thumbs.db
+*.sass-cache*
+*~imageoptim*
