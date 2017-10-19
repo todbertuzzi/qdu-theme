@@ -78,6 +78,7 @@
  */       
         shapeEl = $('div.morph-shape');
 
+        shapeEl.hide();
 
         // RESET OPACITY LOGO
         var qdu_quasar_logo =  new Snap('#qdu_quasar_svg')
@@ -111,6 +112,7 @@
           width: 0
         });  
         
+        shapeEl.show();
 
         // COMPARSA SCRITTE
         setTimeout(function () {
