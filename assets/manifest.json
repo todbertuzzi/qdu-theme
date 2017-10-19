@@ -2,7 +2,8 @@
   "dependencies": {
     "main.js": {
       "files": [
-        "scripts/main.js"
+        "scripts/main.js",
+        "bower_components/svg.js/dist/svg.js"       
       ],
       "main": true
     },

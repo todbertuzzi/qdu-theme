@@ -1,3 +1,87 @@
+.container.testata{
+background-color: #0095D5;
+
+}
+
+.banner{
+    background-color:  #707070!important;
+}
 .navbar-brand{
 	width: 100%;
+}
+
+.navbar-brand{
+	position: relative;
+	z-index: 99999;
+	background-color: #0095D5;
+}
+.navbar-brand svg{
+        margin-left: 18px;
+    }
+
+
+.shiftnav-toggle-button {
+    color: #fff !important;
+    font-size: 13px;
+}
+.shiftnav-toggle-button  i {
+        text-transform: capitalize;    
+    }
+
+#qdu_quasar_svg,#qdu_design_svg,#qdu_university_svg,{
+//opacity: 0;
+}
+#qdu_barra_q{
+
+}
+
+#wrapperMask{
+	position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #0095D5;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 94px;
+    z-index: 9999;
+    opacity: 1;
+}
+
+
+.morph-shape,
+.morph-shape svg {
+   
+}
+
+.morph-shape {
+    position: absolute;
+    width: 100%;
+    top: 94px;
+    left: 0;
+    height: 100vh;
+    -webkit-transition: height 0.5s cubic-bezier(0.7, 0, 0.3, 1);
+    transition: height 0.5s cubic-bezier(0.7, 0, 0.3, 1);
+    z-index: 99999;
+}
+
+.morph-shape svg {
+    height: 100vh;
+    position: fixed;
+}
+
+.menu-principale{
+    margin-left: 50px;
+}
+
+.menu.menu--open .morph-shape {
+    height: 400px;
+}
+
+.morph-shape svg path {
+    fill: #0095D5;
+}
+
+.navbar-nav li{
+    font-size: 13px;
 }
