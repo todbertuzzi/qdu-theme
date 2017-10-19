@@ -8,6 +8,8 @@ background-color: #0095D5;
 }
 .navbar-brand{
 	width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .navbar-brand{
@@ -57,7 +59,7 @@ background-color: #0095D5;
 .morph-shape {
     position: absolute;
     width: 100%;
-    top: 94px;
+    top: 123px;
     left: 0;
     height: 100vh;
     -webkit-transition: height 0.5s cubic-bezier(0.7, 0, 0.3, 1);
