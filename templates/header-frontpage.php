@@ -6,11 +6,12 @@
 <header class="banner" role="banner">
  <div class="container">
  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <!--<button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         &#9776;
-      </button>
+      </button>-->
+      <a class="shiftnav-toggle shiftnav-toggle-button" data-shiftnav-target="shiftnav-main"><i class="fa fa-bars"></i>MENU</a>
+          
       <div class="collapse navbar-collapse" id="navbarCollapse">
-          <a class="shiftnav-toggle shiftnav-toggle-button" data-shiftnav-target="shiftnav-main"><i class="fa fa-bars"></i>MENU</a>
           <?php get_search_form(true); ?>
           <?php
           if (has_nav_menu('primary_navigation')) :
