@@ -1,12 +1,17 @@
 {
   "dependencies": {
+    "anim_logo.js": {
+       "files": [
+       "scripts/anim_logo.js"
+       ]
+     },
     "main.js": {
       "files": [
-        "scripts/main.js",
-        "bower_components/svg.js/dist/svg.js"       
+        "scripts/main.js"
       ],
       "main": true
     },
+    
     "main.css": {
       "files": [
         "styles/main.scss"
@@ -17,12 +22,12 @@
       "files": [
         "scripts/customizer.js"
       ]
-    },
+    }, 
     "jquery.js": {
       "bower": ["jquery"]
     }
   },
   "config": {
-    "devUrl": "http://example.dev"
+    "devUrl": "http://localhost:8080/"
   }
 }

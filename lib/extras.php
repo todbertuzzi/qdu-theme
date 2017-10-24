@@ -14,6 +14,9 @@ function body_class($classes) {
       $classes[] = basename(get_permalink());
     }
   }
+  if ( !is_front_page() ){
+    $classes[] = 'allButHome';
+  }
 
   // Add class if sidebar is active
   if (Setup\display_sidebar()) {

@@ -60,7 +60,8 @@ add_action('after_setup_theme', __NAMESPACE__ . '\\setup');
 
 add_theme_support( 'post-thumbnails' );
 add_image_size( 'sidebar-thumb', 220, 220, true ); // Hard Crop Mode
-add_image_size( 'homepage-thumb', 320, 260 ); // Soft Crop Mode
+add_image_size( 'homepage-hard', 350, 230, true ); // Hard Crop Mode
+add_image_size( 'homepage-soft', 320, 260 ); // Soft Crop Mode
 add_image_size( 'singlepost-thumb', 590, 9999 ); // Unlimited Height Mode
 
 /**
@@ -148,6 +149,27 @@ function my_acf_init() {
     }
 }
 
+
+ 
+function wpb_adding_scripts() {
+ 
+
+  wp_register_script('kute', 'http://cdn.jsdelivr.net/kute.js/1.6.0/kute.min.js', array('jquery'),'1.1', true);
+  wp_enqueue_script('kute');
+
+  wp_register_script('kutesvg', 'http://cdn.jsdelivr.net/kute.js/1.6.0/kute-svg.min.js', array('jquery'),'1.1', true);
+  wp_enqueue_script('kutesvg');
+
+
+  wp_register_script('kuteattrib', 'http://cdn.jsdelivr.net/kute.js/1.6.0/kute-attr.min.js', array('jquery'),'1.1', true);
+  wp_enqueue_script('kuteattrib');
+
+}
+ 
+add_action( 'wp_enqueue_scripts',  __NAMESPACE__ . '\\wpb_adding_scripts' ); 
+
+
+wp_enqueue_script('theme_homepage', Assets\asset_path('scripts/anim_logo.js'), ['jquery'], null, true);
 
 /**
  * Add search box to primary menu

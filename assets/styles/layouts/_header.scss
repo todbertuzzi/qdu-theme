@@ -4,8 +4,14 @@ background-color: #0095D5;
 }
 
 .banner{
-    background-color:  #707070!important;
+    background-color:  #343a40!important;
 }
+
+.banner .container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
 .navbar-brand{
 	width: 100%;
     padding-top: 20px;
@@ -14,13 +20,41 @@ background-color: #0095D5;
 
 .navbar-brand{
 	position: relative;
-	z-index: 99999;
+	z-index: 2;
 	background-color: #0095D5;
 }
 .navbar-brand svg{
-        margin-left: 18px;
-    }
+    //margin-left: 18px;
+    visibility: hidden;
+}
 
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover{
+    font-family: Akkurat-bold;
+    color: #dc3545;
+}
+
+.navbar-light .navbar-nav .show>.nav-link {
+    font-family: Akkurat-bold;
+    color: #dc3545;
+}
+
+a.nav-link {
+    font-family: Akkurat-light;
+}
+.dropdown-menu.show{
+    background-color: #343a40;
+}
+
+.dropdown-item{
+    color: #fff;
+    font-family: Akkurat;
+}
+
+.dropdown-item:focus, .dropdown-item:hover{
+    color: #fff;
+    text-decoration: none;
+    background-color: #dc3545;
+}
 
 .shiftnav-toggle-button {
     color: #fff !important;
@@ -30,6 +64,14 @@ background-color: #0095D5;
 .shiftnav-toggle-button  i {
         text-transform: capitalize;    
     }
+
+.shiftnav-toggle-button{
+        background: #dc3545
+}   
+
+.bg-light {
+    background-color: #343a40!important;
+} 
 
 #qdu_quasar_svg,#qdu_design_svg,#qdu_university_svg,{
 //opacity: 0;
@@ -58,14 +100,15 @@ background-color: #0095D5;
 }
 
 .morph-shape {
-    position: absolute;
+    position: fixed;
     width: 100%;
-    top: 123px;
+    top: 0;
     left: 0;
     height: 100vh;
     -webkit-transition: height 0.5s cubic-bezier(0.7, 0, 0.3, 1);
     transition: height 0.5s cubic-bezier(0.7, 0, 0.3, 1);
-    z-index: 99999;
+    z-index: 1;
+    //visibility: hidden;
 }
 
 .morph-shape svg {

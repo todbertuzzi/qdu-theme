@@ -1,9 +1,10 @@
 <?php
   // For use with Sagextras (https://github.com/storm2k/sagextras)
 ?>
-<a class="navbar-brand" href="<?= esc_url(home_url('/')); ?>"><?php get_template_part('templates/svg/inline','qdu_logo_banner.svg'); ?></a>      
+<a class="navbar-brand" href="<?= esc_url(home_url('/')); ?>"><div class="container testata"><?php get_template_part('templates/svg/inline','qdu_logo_banner.svg'); ?></div></a>      
 <!--<div id="wrapperMask"></div>-->
 <header class="banner" role="banner">
+ <div class="container">
  <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         &#9776;
@@ -18,6 +19,7 @@
           ?>
       </div>
     </nav>
+  </div>
 </header>
 
 <!--

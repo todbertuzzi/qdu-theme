@@ -9,6 +9,7 @@
   "dependencies": {
     "bootstrap": "git://github.com/twbs/bootstrap.git#v4.0.0-beta",
     "popper.js": "^1.12.3",
-    "Snap.svg": "snap.svg#^0.5.1"
+    "Snap.svg": "snap.svg#^0.5.1",
+    "cookies-js": "^1.2.3"
   }
 }
