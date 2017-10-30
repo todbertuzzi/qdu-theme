@@ -1,10 +1,8 @@
 <?php
   // For use with Sagextras (https://github.com/storm2k/sagextras)
 ?>
-<a class="navbar-brand" href="<?= esc_url(home_url('/')); ?>"><div class="container testata"><?php get_template_part('templates/svg/inline','qdu_logo_banner.svg'); ?></div></a>     
-<!--<div id="wrapperMask"></div>-->
+<a class="navbar-brand" href="<?= esc_url(home_url('/')); ?>"><div class="container-fluid testata"><div class="logoHolder"><?php get_template_part('templates/svg/inline','qdu_logo_banner.svg'); ?></div><div class="logo_30_holder"><?php get_template_part('templates/svg/inline','qdu_30_anni_banner.svg'); ?></div></div></a>     
 <header class="banner" role="banner">
- <div class="container">
  <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <!--<button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         &#9776;
@@ -20,32 +18,12 @@
           ?>
       </div>
     </nav>
+    
 </header>
-</div>
-<!--
-<div class="morph-shape"  data-morph-1="M0,400Q265.126,123.637 550,400L550,0 0,0 0,400" data-morph-2="M550,228.05L550,0 0,0 0,225.05Q249.296,111.091 550,228.05" data-morph-3="M550,25.05L550,0 0,0 0,37.05Q249.296,111.091 550,25.05">
-             <svg width="100%" height="100%"  transform="scale(1,1)" viewBox="0 0 550 400" preserveAspectRatio="none">
-                <path id="pathMorph" fill="none" d="M550,0L0,0 0,400 550,400 550,0"/>
-              </svg> 
-</div>              
--->
+
 <div class="morph-shape"  data-morph-1="M0,0L0,400 550,400 550,0Q273.19,210.13 0,0" data-morph-2="M0,381.95L0,400 550,400 550,381.95 0,381.95" data-morph-3="M550.45,108L550.45,0 0.45,0 0.45,175Q84.98,208.36 274.65,224.45 440.34,238.67 550.45,1">
              <svg width="100%" height="100%"  transform="scale(1,-1)" viewBox="0 0 550 400" preserveAspectRatio="none">
                 <path  id="pathMorph" fill="none" d="M0,0L0,400 550,400 550,0 0,0"/>
               </svg> 
 </div>
 
-
-<!--
-<div class="shape-wrap">
-          <svg class="shape" width="100%" height="100vh" preserveAspectRatio="none" viewBox="0 0 1440 800" xmlns:pathdata="http://www.codrops.com/">
-            <path id="shape"  d="M -44,-50 C -52.71,28.52 15.86,8.186 184,14.69 383.3,22.39 462.5,12.58 638,14 835.5,15.6 987,6.4 1194,13.86 1661,30.68 1652,-36.74 1582,-140.1 1512,-243.5 15.88,-589.5 -44,-50 Z" pathdata:id="M -44,-50 C -137.1,117.4 67.86,445.5 236,452 435.3,459.7 500.5,242.6 676,244 873.5,245.6 957,522.4 1154,594 1593,753.7 1793,226.3 1582,-126 1371,-478.3 219.8,-524.2 -44,-50 Z"></path>
-          </svg>
-</div>
-
-<div class="morph-shape" data-morph-open="M260,500H0c0,0,8-120,8-250C8,110,0,0,0,0h260c0,0-8,110-8,250C252,380,260,500,260,500z">
-              <svg width="100%" height="100%" viewBox="0 0 260 500" preserveAspectRatio="none">
-                <path id="pathMorph" fill="none" d="M260,500H0c0,0,0-120,0-250C0,110,0,0,0,0h260c0,0,0,110,0,250C260,380,260,500,260,500z"/>
-              </svg>
-            </div>
-            -->

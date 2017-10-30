@@ -1,6 +1,18 @@
-.container.testata{
+.container-fluid.testata{
 background-color: #0095D5;
+    & .logo_30_holder{
+        float: right;
+    }
+    & .logoHolder{
+        float: left;
+    }
+}   
 
+.home .banner{
+        margin-top: -7px;
+}
+.banner{
+    margin-top: -7px;
 }
 
 .banner{
@@ -15,7 +27,7 @@ background-color: #0095D5;
 .navbar-brand{
 	width: 100%;
     padding-top: 20px;
-    padding-bottom: 20px;
+   // padding-bottom: 20px;
 }
 
 .navbar-brand{

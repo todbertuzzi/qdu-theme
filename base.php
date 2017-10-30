@@ -16,7 +16,13 @@ use Roots\Sage\Wrapper;
     <![endif]-->
     <?php
       do_action('get_header');
-      get_template_part('templates/header');
+      
+      if(is_page_template("template-megamenu.php")){
+      //  echo "<h1>".basename( get_page_template())."</h1>";
+        get_template_part('templates/header-megamenu');
+      }else{
+        get_template_part('templates/header');
+      }
     ?>
     <div class="wrap container" role="document">
       <div class="content row">

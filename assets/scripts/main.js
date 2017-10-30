@@ -34,6 +34,9 @@
         // JavaScript to be fired on all pages
         //var draw = SVG('#qdu_barra_2')
         //draw.animate().move(100, 100)
+        
+        
+
 
       },
       finalize: function() {

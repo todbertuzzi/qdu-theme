@@ -102,6 +102,7 @@ function display_sidebar() {
     is_page_template('template-custom.php'),
     is_single( ),
     is_page( ),
+    is_search()
   ]);
 
   return apply_filters('sage/display_sidebar', $display);
@@ -182,3 +183,32 @@ function wpgood_nav_search($items, $args) {
     return  '<li>' . get_search_form(false) . '</li>'.$items ;
 }
 //add_filter('wp_nav_menu_items', __NAMESPACE__ . '\\wpgood_nav_search', 10, 2);
+
+
+
+/**
+ * SearchWp - Weights in Custom Feild
+ */
+function my_searchwp_query_main_join( $sql, $engine ) {
+  global $wpdb;
+  $my_meta_key = 'peso_ricerca';  // the meta_key you want to order by
+  $sql = $sql . " LEFT JOIN {$wpdb->postmeta} ON {$wpdb->posts}.ID = {$wpdb->postmeta}.post_id AND {$wpdb->postmeta}.meta_key = '{$my_meta_key}'";
+  return $sql;
+}
+add_filter( 'searchwp_query_main_join', __NAMESPACE__ . '\\my_searchwp_query_main_join', 10, 2 );
+
+function my_searchwp_query_orderby( $orderby ) {
+  global $wpdb;
+  $my_order = "DESC"; // use DESC or ASC
+  $original_orderby = str_replace( 'ORDER BY', '', $orderby );
+  if ( "DESC" === $my_order ) {
+    // Sort in descending order
+    $new_orderby = "ORDER BY {$wpdb->postmeta}.meta_value+0 DESC, " . $original_orderby;
+  } else {
+    // Sort in ascending order; place empties last
+    // @link http://stackoverflow.com/questions/2051602/mysql-orderby-a-number-nulls-last#8174026
+    $new_orderby = "ORDER BY -{$wpdb->postmeta}.meta_value+0 DESC, " . $original_orderby;
+  }
+  return $new_orderby;
+}
+add_filter( 'searchwp_query_orderby', __NAMESPACE__ . '\\my_searchwp_query_orderby' );
