@@ -61,6 +61,7 @@ add_action('after_setup_theme', __NAMESPACE__ . '\\setup');
 add_theme_support( 'post-thumbnails' );
 add_image_size( 'sidebar-thumb', 220, 220, true ); // Hard Crop Mode
 add_image_size( 'homepage-hard', 350, 230, true ); // Hard Crop Mode
+add_image_size( 'milo-hard', 450, 360, true ); // Hard Crop Mode
 add_image_size( 'homepage-soft', 320, 260 ); // Soft Crop Mode
 add_image_size( 'singlepost-thumb', 590, 9999 ); // Unlimited Height Mode
 
