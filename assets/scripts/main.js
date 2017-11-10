@@ -34,18 +34,20 @@
         // JavaScript to be fired on all pages
         //var draw = SVG('#qdu_barra_2')
         //draw.animate().move(100, 100)
-
+        console.log("common");
         
-
 
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
       }
     },
+
     // Home page
     'home': {
       init: function() {
+        console.log("home")
+
         var cookie_anim_logo= Cookies.get('show_intro');
         if(cookie_anim_logo!=="false" || !cookie_anim_logo  ){
           console.log("show_intro "+cookie_anim_logo);
@@ -55,6 +57,16 @@
          // skipAnimation();
           startAnimLogo();
         }
+      },
+      finalize: function() {
+        // JavaScript to be fired on the home page, after the init JS
+      }
+    },
+    'vertical_layout':{
+      init: function() {
+          console.log("vertical_layout");
+          testAnimIcon();
+          verticalLayout_init();  
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS

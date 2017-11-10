@@ -1,12 +1,9 @@
 {
   "dependencies": {
-    "anim_logo.js": {
-       "files": [
-       "scripts/anim_logo.js"
-       ]
-     },
     "main.js": {
       "files": [
+        "scripts/anim_logo.js",
+        "scripts/vertical_layout.js",
         "scripts/main.js"
       ],
       "main": true

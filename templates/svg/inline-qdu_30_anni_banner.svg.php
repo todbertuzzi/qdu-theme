@@ -1,10 +1,10 @@
 <!doctype html>
 <!doctype html>
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+<svg id="logo_30_anni_svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
    width="75px" height="88px" viewBox="0 7 75 88" enable-background="new 0 0 75 88" xml:space="preserve">
 <g>
   <rect class="barra_30_logo" x="4" y="67.215" fill="#ffffff" width="67.159" height="4.388"/>
-  <g class="scritta_30_logo" transform="matrix(1, 0, 0, 1, 30, 0)">
+  <g class="scritta_30_logo">
     <path fill="#ffffff" d="M54.164,7.131c-4.26,0-8.396,1.569-11.457,4.591c-4.614,4.531-5.454,10.806-5.454,17.635
       c0,6.82,0.84,13.104,5.454,17.635c2.419,2.379,5.502,3.821,8.792,4.343V63.38h5.339V51.335c3.28-0.521,6.366-1.964,8.779-4.343
       c4.619-4.531,5.458-10.814,5.458-17.635c0-6.829-0.839-13.104-5.458-17.635C62.561,8.7,58.42,7.131,54.164,7.131 M61.901,43.248

@@ -50,12 +50,13 @@ background-color: #0095D5;
 }
 
 .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover{
-    font-family: Akkurat-bold;
+    font-family: 'Akkurat';
+    font-weight: bold;
     color: #dc3545;
 }
 
 .navbar-light .navbar-nav .show>.nav-link {
-    font-family: Akkurat-bold;
+    font-family: 'Akkurat';
     color: #dc3545;
 }
 
@@ -72,7 +73,7 @@ background-color: #0095D5;
 }
 
 a.nav-link {
-    font-family: Akkurat-light;
+    font-family: 'Akkurat';
 }
 .dropdown-menu.show{
     background-color: #343a40;
@@ -80,7 +81,7 @@ a.nav-link {
 
 .dropdown-item{
     color: #fff;
-    font-family: Akkurat;
+    font-family: 'Akkurat';
 }
 
 .dropdown-item:focus, .dropdown-item:hover{

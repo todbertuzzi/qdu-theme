@@ -35,7 +35,8 @@ function setup() {
   // Register wp_nav_menu() menus
   // http://codex.wordpress.org/Function_Reference/register_nav_menus
   register_nav_menus([
-    'primary_navigation' => __('Primary Navigation', 'sage')
+    'primary_navigation' => __('Primary Navigation', 'sage'),
+    'vertical_navigation' => __('Vertical Navigation', 'sage')
   ]);
 
   // Enable post thumbnails
@@ -103,7 +104,8 @@ function display_sidebar() {
     is_page_template('template-custom.php'),
     is_single( ),
     is_page( ),
-    is_search()
+    is_search(),
+    is_tax("tipologia_corsi")
   ]);
 
   return apply_filters('sage/display_sidebar', $display);
@@ -122,6 +124,8 @@ function assets() {
   wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
+
+
 
 add_action('acf/init', __NAMESPACE__ . '\\my_acf_init');
 
@@ -153,25 +157,8 @@ function my_acf_init() {
 
 
  
-function wpb_adding_scripts() {
- 
 
-  wp_register_script('kute', 'http://cdn.jsdelivr.net/kute.js/1.6.0/kute.min.js', array('jquery'),'1.1', true);
-  wp_enqueue_script('kute');
-
-  wp_register_script('kutesvg', 'http://cdn.jsdelivr.net/kute.js/1.6.0/kute-svg.min.js', array('jquery'),'1.1', true);
-  wp_enqueue_script('kutesvg');
-
-
-  wp_register_script('kuteattrib', 'http://cdn.jsdelivr.net/kute.js/1.6.0/kute-attr.min.js', array('jquery'),'1.1', true);
-  wp_enqueue_script('kuteattrib');
-
-}
- 
-add_action( 'wp_enqueue_scripts',  __NAMESPACE__ . '\\wpb_adding_scripts' ); 
-
-
-wp_enqueue_script('theme_homepage', Assets\asset_path('scripts/anim_logo.js'), ['jquery'], null, true);
+//wp_enqueue_script('theme_homepage', Assets\asset_path('scripts/anim_logo.js'), ['jquery'], null, true);
 
 /**
  * Add search box to primary menu
