@@ -77,6 +77,23 @@
       init: function() {
         // JavaScript to be fired on the about us page
       }
+    },
+    // About us page, note the change from about-us to about_us.
+    'vertical_layout_alt': {
+      init: function() {
+        console.log("vertical_layout_alt");
+
+        //.page-template-template-vertical-layout-alt navbar-brand
+        //.page-template-template-vertical-layout-alt wrapper-vertical-header-inner nav
+        //415
+          var height = window.innerHeight;
+          console.log("resizeVertical "+height);
+          var marginTop= (height-315)/2
+          //marginTop = marginTop-20;
+          // jQuery('.page-template-template-vertical-layout-alt .navbar-brand').css("margin-top",marginTop  )
+           jQuery('.page-template-template-vertical-layout-alt .wrapper-vertical-header-inner nav').css("margin-top",marginTop  )
+              
+      }
     }
   };
 

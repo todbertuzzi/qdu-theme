@@ -112,20 +112,32 @@ body::after {
 	.container {
 	    max-width: 1240px !important;
 	}
+    .page-template-template-vertical-layout-alt .container {
+        max-width: 1440px !important;
+    }
 }
 @media (min-width: 1600px){
 	.container {
 	    max-width: 1460px !important;
 	}
+    .page-template-template-vertical-layout-alt .container {
+        max-width: 1600px !important;
+    }
 }
 @media (min-width: 1800px){
 	.container {
 	    max-width: 1460px !important;
 	}
+    .page-template-template-vertical-layout-alt .container {
+        max-width: 1600px !important;
+    }
 }
 @media (min-width: 2000px){
 	.container {
 	    max-width: 1480px !important;
 	}
+    .page-template-template-vertical-layout-alt .container {
+        max-width: 1680px !important;
+    }
 }
 
