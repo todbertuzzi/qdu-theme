@@ -433,7 +433,11 @@ class BlogPostsModule extends FLBuilderModule {
         if( isset( $this->settings->show_custom_field ) && $this->settings->show_custom_field != 'none' ) {        
             $field_value = get_post_meta( $post_id, $field, true );
             if ( ! is_array( $field_value ) ) {
-                echo '<div class="custom_field_wrap">'. $field_value .'</div>';
+                // TOD MOD
+                // echo '<div class="custom_field_wrap">'. $field_value .'</div>';
+                //echo '<div class="custom_field_wrap">'. the_field('icon_overlay',$post_id) .'</div>';
+                
+                
             }
         }
      
@@ -544,7 +548,10 @@ class BlogPostsModule extends FLBuilderModule {
 
 
     /**
-     * @method render_featured_image
+     * @method render_featured_image 
+     * $this->render_custom_fields( $obj->ID, $this->settings->field_key );
+     *                   render_featured_image
+     * $show_meta = ( isset( $this->settings->show_meta ) ) ? $this->settings->show_meta : 'yes';
      */
     public function render_featured_image( $pos = 'top', $obj, $i ) {
         $html = '';
@@ -579,7 +586,25 @@ class BlogPostsModule extends FLBuilderModule {
             <?php do_action( 'uabb_blog_posts_before_image', $obj->ID ); ?>
 
                 <a href="<?php echo $link; ?>" target="<?php echo $this->settings->link_target; ?>" title="<?php the_title_attribute(); ?>">
-                <img <?php echo $img_url; ?> alt="<?php echo $img_data['alt']; ?>" />
+                <img <?php echo $img_url; ?> alt="<?php echo $img_data['alt']; ?>"  class="img-icon-under" />
+                  <?php
+                 if( isset( $this->settings->show_custom_field ) && $this->settings->show_custom_field != 'none' ) {        
+                        $field_value = get_post_meta( $post_id, $field, true );
+                        if ( ! is_array( $field_value ) ) {
+                            
+                            echo '<img src='.get_field('icon_overlay',$post_id) .' alt="'.$field_value.'"  class="img-icon-overlay">';
+                            //echo "<script>console.log( 'Debugggg Objects: " ."ecco". the_field($field,$post_id) . "' );</script>";
+                            //echo '<div class="custom_field_wrap">'. the_field('icon_overlay',$post_id) .'</div>';
+                
+                            //$this->render_icon_overlay($img_data, $field_value);
+                            // TOD MOD
+                            // echo '<div class="custom_field_wrap">'. $field_value .'</div>';
+                        }else{
+                            //echo "<script>console.log( 'Debug Objects: " . "no field value" . "' );</script>";
+                            
+                        }
+                    }
+                 ?>
                 </a>
 
             <?php do_action( 'uabb_blog_posts_after_image', $obj->ID ); ?>
@@ -648,6 +673,11 @@ class BlogPostsModule extends FLBuilderModule {
         return $html;
     }
 
+    public function render_icon_overlay( $img_data ,$field_value) {
+       // $img_url = $img_data['image'];    
+       // echo '<img '.$img_url.' alt="'.$field_value.'"  class="img-icon-overlay">';
+                            
+    }
     
     /**
      * @method render_title_section
@@ -963,6 +993,7 @@ class BlogPostsModule extends FLBuilderModule {
 
                      case 'custom_field':
                         $this->render_custom_fields( $obj->ID, $this->settings->field_key );
+                        
                         break;
 
                     default:
