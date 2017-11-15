@@ -72,7 +72,7 @@ if( $settings->is_carousel == 'masonary' ) {
 }
 
 ?>
-<div class="uabb-module-content uabb-blog-posts <?php echo ( $settings->styleContenuto == 'news') ? 'news-Style ': ' ' ; echo ( $settings->is_carousel == 'carousel' ) ? 'uabb-blog-posts-carousel' : ( ( $settings->is_carousel == 'grid' ) ? 'uabb-blog-posts-grid' : '' ); ?> uabb-post-grid-<?php echo $col; ?> <?php echo ( $settings->is_carousel == 'masonary' ) ? ' uabb-blog-posts-masonary ' : ''; ?>">
+<div class="uabb-module-content uabb-blog-posts <?php echo ( $settings->is_carousel == 'carousel' ) ? 'uabb-blog-posts-carousel' : ( ( $settings->is_carousel == 'grid' ) ? 'uabb-blog-posts-grid' : '' ); ?> uabb-post-grid-<?php echo $col; ?> <?php echo ( $settings->is_carousel == 'masonary' ) ? ' uabb-blog-posts-masonary ' : ''; ?>">
 	<?php
 	$class = '';
 

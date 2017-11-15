@@ -18,7 +18,7 @@ use Roots\Sage\Wrapper;
       do_action('get_header');
       get_template_part('templates/header-vertical-alt');
     ?>
-    <div class="wrap container-fluid" role="document">
+    <div class="wrap container-fluid holder_A" role="document">
       <div class="content row">
         <main class="main">
           <?php include Wrapper\template_path(); ?>
@@ -30,7 +30,7 @@ use Roots\Sage\Wrapper;
         <?php endif; ?>
       </div><!-- /.content -->
     </div><!-- /.wrap -->
-    <div class="wrap container-fluid" role="document">
+    <div class="wrap container-fluid holder_B" role="document">
       <?php  do_action('vertical-home-after-news') ; ?>
     </div>  
     <?php

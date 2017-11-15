@@ -48,8 +48,6 @@ class BlogPostsModule extends FLBuilderModule {
         $this->uabb_args = $args;
     }
 
-    
-
     /**
      * @method Accessor function to get $uabb_args
      * @public
@@ -436,11 +434,6 @@ class BlogPostsModule extends FLBuilderModule {
             $field_value = get_post_meta( $post_id, $field, true );
             if ( ! is_array( $field_value ) ) {
                 // TOD MOD
-                 if($this->settings->styleContenuto == 'news' ){
-                 
-                 }else{
-                    echo '<div class="custom_field_wrap">'. $field_value .'</div>';
-                 }
                 // echo '<div class="custom_field_wrap">'. $field_value .'</div>';
                 //echo '<div class="custom_field_wrap">'. the_field('icon_overlay',$post_id) .'</div>';
                 
@@ -598,9 +591,8 @@ class BlogPostsModule extends FLBuilderModule {
                  if( isset( $this->settings->show_custom_field ) && $this->settings->show_custom_field != 'none' ) {        
                         $field_value = get_post_meta( $post_id, $field, true );
                         if ( ! is_array( $field_value ) ) {
-                           if($this->settings->styleContenuto == 'news' ){  
+                            
                             echo '<img src='.get_field('icon_overlay',$post_id) .' alt="'.$field_value.'"  class="img-icon-overlay">';
-                            }
                             //echo "<script>console.log( 'Debugggg Objects: " ."ecco". the_field($field,$post_id) . "' );</script>";
                             //echo '<div class="custom_field_wrap">'. the_field('icon_overlay',$post_id) .'</div>';
                 
@@ -696,11 +688,7 @@ class BlogPostsModule extends FLBuilderModule {
         if( $show_title == 'yes' ) {
         ?>
             <<?php echo $this->settings->title_tag_selection; ?> class="uabb-post-heading uabb-blog-post-section">
-               <?php
-              // TOD
-               if($this->settings->styleContenuto == 'news' ){
-                ?>
-            <div class="row">
+                <div class="row">
                 <div class="col-sm-3">
                     <?php
                         echo '<div class="custom_icon_title_wrap"><img src="'. get_field('icon-title',$post_id) .'"></div>';    
@@ -710,20 +698,11 @@ class BlogPostsModule extends FLBuilderModule {
                 <div class="col-sm-9">
                     <?php
                     $title = '<a href='. apply_filters( "uabb_blog_posts_link", get_permalink( $obj->ID ), $obj->ID ) .' title=' . the_title_attribute('echo=0') . ' tabindex="0" class="">'. get_the_title() .'</a>';
-                    //echo $this->settings->styleContenuto;
+
                     echo apply_filters( 'uabb_advanced_post_title_link', $title, get_the_title(), get_permalink( $obj->ID ), $obj->ID );
                     ?>
                 </div>
             </div>
-                <?php
-               }else{
-                    $title = '<a href='. apply_filters( "uabb_blog_posts_link", get_permalink( $obj->ID ), $obj->ID ) .' title=' . the_title_attribute('echo=0') . ' tabindex="0" class="">'. get_the_title() .'</a>';
-                    //echo $this->settings->styleContenuto;
-                    echo apply_filters( 'uabb_advanced_post_title_link', $title, get_the_title(), get_permalink( $obj->ID ), $obj->ID );
-                
-               }
-               ?>
-                
             </<?php echo $this->settings->title_tag_selection; ?>>
         <?php
         }
@@ -770,19 +749,13 @@ class BlogPostsModule extends FLBuilderModule {
             if( $content_count != 0 ) {
                 if( $content_type == 'excerpt' && $strip_html == 'no' ) {
                 ?>
-                    <div class="uabb-blog-posts-description uabb-blog-post-section uabb-text-editor">
-                            <?php echo apply_filters('uabb_blog_posts_excerpt', the_excerpt() ); ?>
-                    </div>
+                    <div class="uabb-blog-posts-description uabb-blog-post-section uabb-text-editor"><?php echo apply_filters('uabb_blog_posts_excerpt', the_excerpt() ); ?></div>
                 <?php
                 } elseif ( $content_type == 'content' && $strip_html == 'no' ) { ?>
-                    <div class="uabb-blog-posts-description uabb-blog-post-section uabb-text-editor">
-                            <?php echo apply_filters('uabb_blog_posts_excerpt', the_content() ); ?>
-                    </div>
+                    <div class="uabb-blog-posts-description uabb-blog-post-section uabb-text-editor"><?php echo apply_filters('uabb_blog_posts_excerpt', the_content() ); ?></div>
                 <?php
                 } else { ?>
-                    <div class="uabb-blog-posts-description uabb-blog-post-section uabb-text-editor">
-                        <?php echo apply_filters('uabb_blog_posts_excerpt',$content); ?>
-                    </div>
+                    <div class="uabb-blog-posts-description uabb-blog-post-section uabb-text-editor"><?php echo apply_filters('uabb_blog_posts_excerpt',$content); ?></div>
                 <?php
                 }
             }
@@ -992,11 +965,9 @@ class BlogPostsModule extends FLBuilderModule {
             //echo "<script type='text/javascript'>alert('$layout_sequence[1]');</script>";
             // TOD
             // SWAP ORDER TRA TITOLO E META
-            if($this->settings->styleContenuto == 'news' ){
-                $temp = $layout_sequence[0];
-                $layout_sequence[0] = $layout_sequence[1];
-                $layout_sequence[1] = $temp;
-            }
+            $temp = $layout_sequence[0];
+            $layout_sequence[0] = $layout_sequence[1];
+            $layout_sequence[1] = $temp;
 
             foreach( $layout_sequence as $sq ) {
                 switch ( $sq ) {
@@ -1063,6 +1034,7 @@ FLBuilder::register_module('BlogPostsModule', array(
                         'help' => __( 'This is how your posts you want to display.', 'uabb' ),
                         'options'       => array(
                             'carousel'  => __( 'Carousel', 'uabb' ),
+                            'carousel-news'    => __( 'News', 'uabb' ),
                             'grid'    => __( 'Grid', 'uabb' ),
                             'feed'    => __( 'Feeds', 'uabb' ),
                             'masonary' => __( 'Masonry', 'uabb' )
@@ -1073,23 +1045,8 @@ FLBuilder::register_module('BlogPostsModule', array(
                             )
                         )
                     ),
-                ),
-                 
-            ),'my-content-style-filter'  => array(
-                'title'         => __( 'Content Style', 'uabb' ),
-                'fields'        => array(
-                    'styleContenuto'     => array(
-                        'type'          => 'select',
-                        'label'         => __( 'Style', 'uabb' ),
-                        'default' => 'default',
-                        'options'       => array(
-                            'default'      => __('Default', 'uabb'),
-                            'news'      => __('News', 'uabb'),
-                        )
-                    )
                 )
             ),
-            
             'grid_filter' => array(
                 'title' => __( 'Number of Posts to Show ', 'uabb' ),
                 'fields' => array(

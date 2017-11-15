@@ -7,26 +7,28 @@
   <div class="wrapper-vertical-menu">
     <div class="wrapper-vertical-menu-inner">
       <a class="shiftnav-toggle shiftnav-toggle-button stretto" data-shiftnav-target="shiftnav-main">
-<svg viewBox="0 0 48 64" width="48" height="64" xmlns="http://www.w3.org/2000/svg">
-  <g transform="matrix(0, 1, -1, 0, 55, 0)">
-    <path class="dxPath" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="bevel" d="m 5.0916789,20.818994 53.8166421,0"/>
-    <path class="centerPath" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="bevel" d="m 5.1969746,31.909063 53.8166424,0"/>
-    <path class="sxPath" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="bevel" d="m 5.0916788,42.95698 53.8166422,0"/>
-  </g>
-</svg>
-<!--
-  
-  M 5.092 20.819 L 59.051 44.492
-
-  M 5.092 42.957 L 59.052 20.575
--->
+        <svg viewBox="0 0 48 64" width="48" height="64" xmlns="http://www.w3.org/2000/svg">
+          <g transform="matrix(0, 1, -1, 0, 55, 0)">
+            <path class="dxPath" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="bevel" d="m 5.0916789,20.818994 53.8166421,0"/>
+            <path class="centerPath" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="bevel" d="m 5.1969746,31.909063 53.8166424,0"/>
+            <path class="sxPath" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="bevel" d="m 5.0916788,42.95698 53.8166422,0"/>
+          </g>
+        </svg>
       </a>     
     </div>
   </div> 
 </header>
 <div class="wrapper-vertical-header">
   <div class="wrapper-vertical-header-inner">
-      <a class="navbar-brand" href="<?= esc_url(home_url('/')); ?>"><div class="logoHolderVertical"><?php get_template_part('templates/svg/inline','qdu_logo_banner.svg'); ?></div></a>     
+      <a class="shiftnav-toggle shiftnav-toggle-button stretto" data-shiftnav-target="shiftnav-main">
+        <svg viewBox="0 0 48 64" width="48" height="64" xmlns="http://www.w3.org/2000/svg">
+          <g transform="matrix(0, 1, -1, 0, 55, 0)">
+            <path class="dxPath" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="bevel" d="m 5.0916789,20.818994 53.8166421,0"/>
+            <path class="centerPath" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="bevel" d="m 5.1969746,31.909063 53.8166424,0"/>
+            <path class="sxPath" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="bevel" d="m 5.0916788,42.95698 53.8166422,0"/>
+          </g>
+        </svg>
+      </a> <a class="navbar-brand" href="<?= esc_url(home_url('/')); ?>"><div class="logoHolderVertical"><?php get_template_part('templates/svg/inline','qdu_logo_banner.svg'); ?></div></a>     
   </div>
 </div>
 
